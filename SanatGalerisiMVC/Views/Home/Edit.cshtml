@@ -1,0 +1,19 @@
+﻿@model SanatGalerisiAPI.Data.Tablo
+
+<h2>Araba Düzenle</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="RessamAdi">RessamAdi</label>
+        <input asp-for="RessamAdi" class="form-control" />
+        <span asp-validation-for="RessamAdi" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ResminYapilmaTarihi">ResminYapilmaTarihi</label>
+        <input asp-for="ResminYapilmaTarihi" type="date" class="form-control" value="@Model.ResminYapilmaTarihi" />
+        <span asp-validation-for="ResminYapilmaTarihi" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>
+

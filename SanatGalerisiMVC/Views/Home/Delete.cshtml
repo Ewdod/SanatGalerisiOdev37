@@ -1,0 +1,13 @@
+﻿@model SanatGalerisiAPI.Data.Tablo
+
+<h2>Tablo Sil</h2>
+<h3>Tablo Id: @Model.Id</h3>
+<h3>Tablo Id: @Model.RessamAdi</h3>
+<h3>Tablo Id: @Model.ResminYapilmaTarihi</h3>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <p>Tabloyu silmek istediğinizden emin misiniz?</p>
+    <button type="submit" class="btn btn-danger">Sil</button>
+    <a asp-action="Index" class="btn btn-secondary">Vazgeç</a>
+</form>
